@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 launch = Path.create!(name: "launch")
+
+launch.slides.create!(name: "first slide", content: "This is the first shit blah blah blah")
