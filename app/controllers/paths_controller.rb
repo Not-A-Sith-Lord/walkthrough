@@ -1,7 +1,7 @@
 class PathsController < ApplicationController
 
-	def index
-		path = Path.all
-		render json: path
+	def show
+		path = Path.find(params[:id])
+		render json: path.slides
 	end
 end
