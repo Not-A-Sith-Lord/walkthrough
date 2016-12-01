@@ -54,6 +54,7 @@ body {
 .bnb {
 	background-color: white;
 	padding: 0;
+	overflow-y: scroll;
 }
 .bnb-header {
 	background-color: grey;

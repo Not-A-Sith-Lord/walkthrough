@@ -1,0 +1,39 @@
+// Place all the styles related to the bnb controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.slider {
+	height: 40rem;
+	background-color: blue;
+}
+
+.content {
+	padding: 2rem;
+	margin-top: 2rem;
+	height: 50rem;
+	// overflow-x: hidden;
+}
+
+.listings {
+	width: 100%;
+    height: 250px;
+    overflow: auto;
+    background-color: white;
+}
+
+.table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 16px;
+}
+
+.listing {
+    width: 343px;
+    height: 229px;
+    display: table-cell;
+    background: #e3e3e3;
+    vertical-align: bottom;
+    text-align: center;
+   
+}
