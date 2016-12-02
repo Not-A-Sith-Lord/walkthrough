@@ -15,19 +15,7 @@
 //= require twitter/bootstrap
 //= require turbolinks
 
-
-// (from before) require_tree ./application
-
-//= require_tree "."
-//= stub "application/modernizr-custom.js"
-
-
-//= stub "application/classie.js"
-//= stub "application/index.js"
-//= stub "application/index.js"
-//= stub "application/dynamics.min.js"
-//= stub "application/main.js"
-//= stub "application/index_2.js"
+//= require_tree .
 
 
 
