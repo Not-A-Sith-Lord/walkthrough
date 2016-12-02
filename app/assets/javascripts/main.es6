@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 	$(".launch-btn").on("click", function(){
 		event.preventDefault();
+		$(".controls").removeClass("hidden");
 		
 		$.ajax({
 			type: "GET",
@@ -27,19 +28,19 @@ function niceFetch(results){
 
 	var stuff = []; 
 
-	results.forEach(function(object){
+	// results.forEach(function(object){
 
-		var content = object.content;
-		var styledContent = `<li class="stack__item">${content}</li>`;
-		stuff.push(styledContent);
-	});
+	// 	var content = object.content;
+	// 	var styledContent = `<li class="stack__item">${content}</li>`;
+	// 	stuff.push(styledContent);
+	// });
 
-	//stuff = [content1, content2, content3, etc.]
+	// //stuff = [content1, content2, content3, etc.]
 
-	stuff.forEach(function(code){
-		console.log(code);
-	});
-	 $(".stack").append(stuff)
+	// stuff.forEach(function(code){
+	// 	console.log(code);
+	// });
+	//  $(".stack").append(stuff)
 }
 
 //End Nice Fetch

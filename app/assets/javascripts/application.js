@@ -15,5 +15,20 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+//= require_tree ./application
 
 console.log("It's working/anakin");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
