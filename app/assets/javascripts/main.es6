@@ -28,18 +28,18 @@ function niceFetch(results){
 
 	results.forEach(function(object){
 		stuff.push(object.content)
-		$(".walkthrough").append(stuff)
 
 	});
 
-	// $(".walkthrough").append(stuff)
+	 // $(".walkthrough").append(stuff)
 }
 
+// End niceFetch
 function badFetch(error){
 	console.log(error)
 	console.log("potato4")
 }
-
+//End badFetch
 
 
 });
