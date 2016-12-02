@@ -9,3 +9,7 @@
 launch = Path.create!(name: "launch")
 
 launch.slides.create!(name: "first slide", content: "This is the first shit blah blah blah")
+
+launch.slides.create!(name: "second slide", content: "This is the second shit blah blah blah")
+launch.slides.create!(name: "third slide", content: "This is the third shit blah blah blah")
+launch.slides.create!(name: "fourth slide", content: "This is the fourth shit blah blah blah")

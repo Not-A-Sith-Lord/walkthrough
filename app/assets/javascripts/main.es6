@@ -8,6 +8,16 @@ $(document).ready(function(){
 function niceFetch(results){
 	console.log(results)
 	console.log("potato")
+
+	var stuff = []; 
+
+	results.forEach(function(object){
+		stuff.push(object.content)
+		$(".walkthrough").append(stuff)
+
+	});
+
+	// $(".walkthrough").append(stuff)
 }
 
 function badFetch(error){
@@ -16,6 +26,7 @@ function badFetch(error){
 }
 
 	$(".launch-btn").on("click", function(){
+		event.preventDefault();
 		
 		$.ajax({
 			type: "GET",
