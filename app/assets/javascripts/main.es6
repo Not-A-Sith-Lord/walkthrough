@@ -1,6 +1,4 @@
-console.log("Main JS loading");
-
-
+// console.log("Main JS loading");
 
 
 $(document).ready(function(){

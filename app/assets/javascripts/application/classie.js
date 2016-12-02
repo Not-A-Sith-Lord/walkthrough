@@ -13,6 +13,11 @@
 /*jshint browser: true, strict: true, undef: true, unused: true */
 /*global define: false, module: false */
 
+
+console.log("Loading classie.js");
+
+
+
 ( function( window ) {
 
 'use strict';
@@ -83,3 +88,4 @@ if ( typeof define === 'function' && define.amd ) {
 }
 
 })( window );
+

@@ -9,7 +9,7 @@
  * http://www.codrops.com
  */
 
- $(document).ready(function(){
+ console.log("Loading main.js");
 
 
 
@@ -248,7 +248,7 @@
 
 
 
- });
+
 
 
 
