@@ -33,7 +33,9 @@ function niceFetch(results){
 			 styledContent = ` <div class="item active">
                     <div class="carousel-content">
                         <div>
+                        	<code>
                             ${content}
+                            </code>
                         </div>
                     </div>
                 </div>`;
@@ -44,7 +46,9 @@ function niceFetch(results){
 			 styledContent = ` <div class="item">
                     <div class="carousel-content">
                         <div>
+                        	<code>
                             ${content}
+                            </code>
                         </div>
                     </div>
                 </div>`;

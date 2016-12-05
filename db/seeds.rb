@@ -8,8 +8,29 @@
 
 launch = Path.create!(name: "launch")
 
-launch.slides.create!(name: "first slide", content: "This is the first shit blah blah blah")
+launch.slides.create!(name: "first slide", content: "<p>Rails.application.routes.draw do</p><br><br>
 
-launch.slides.create!(name: "second slide", content: "This is the second shit blah blah blah")
-launch.slides.create!(name: "third slide", content: "This is the third shit blah blah blah")
+<p>root 'main#show'</p><br><br>
+
+<p>resources :bnb</p><br><br>
+
+<p>scope '/api' do</p><br>
+	<p>resources :paths</p><br>
+<p>end</p><br><br>
+
+<p>end</p>")
+
+launch.slides.create!(name: "second slide", content: "<p>class MainController < ApplicationController</p><br><br>
+
+
+	<p>def show</p>
+	<br><br>
+
+		<p>render :home</p><br>
+	<p>end</p><br>
+<p>end</p>
+")
+launch.slides.create!(name: "third slide", content: "
+
+")
 launch.slides.create!(name: "fourth slide", content: "This is the fourth shit blah blah blah")
