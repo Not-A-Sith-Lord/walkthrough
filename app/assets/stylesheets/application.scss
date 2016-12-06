@@ -10,7 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require prism
  *= require_tree .
+
  *= require_self
  */
 
@@ -43,9 +45,13 @@ body {
 
 	height: 95%;
 	display: inline-block;
-	background-color: green;
+	background-color: #272822;
 	padding: .5rem; /* Controls Screen borders */
 	border: 1px solid black;
+}
+
+.walkthrough {
+	padding: 0;
 }
 
 
@@ -92,19 +98,68 @@ body {
 #text-carousel {
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 0px;
+}
+
+.carousel-control {
+	position: absolute;
+top: 80%; /* pushes the icon in the middle of the height */
+z-index: 5;
+display: inline-block;
+
 }
 
 #left-control, #right-control {
 	background: none;
 	background-image: none;
 }
+#left-control img, #right-control img {
+	width: 75px;
+}
+.carousel,.item,.active{
+   height:100%;
+ }
+.carousel-inner{
+    height:100%;
+}
+
+pre {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.height-window, .carousel-content {
+	height: 100%;
+}
+
+#launch-code {
+	display: none;
+	font-size: 20px;
+	padding: 40px 30px 0 0;
+}
 
 
+.carousel-control {
+	font-size:60px;
+}
 
+#left-control {
 
+-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 
-
+#right-control {
+	-webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
 
 
 

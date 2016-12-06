@@ -14,38 +14,30 @@
   		<h2>Rails on Rails</h2>
   	</header>
 
-  	<div class="bnb col-md-6">
+  	 <div class="bnb col-md-6"> 
     	<%= yield %>
-    </div>
+     </div> 
 
     <div class="walkthrough col-md-6">
       
 
 <div id="text-carousel" class="carousel slide hidden " data-ride="carousel">
-    <!-- Wrapper for slides -->
+
     <div class="row">
-        <div class=" col-xs-12">
+        <div class="height-window col-xs-12">
             <div class="carousel-inner">
-                <!-- <div class="item active">
-                    <div class="carousel-content">
-                        <div>
-                            <p>Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis recusandae corporis culpa quaerat?</p>
-                        </div>
-                    </div>
-                </div> -->
-               
                 
                 
             </div>
         </div>
     </div>
-    <!-- Controls --> <a class="left carousel-control" id="left-control" href="#text-carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
+    <!-- controls -->
+     <a class="left carousel-control" id="left-control" href="#text-carousel" data-slide="prev">
+    <%= image_tag("arrow.png") %>
   </a>
  <a class="right carousel-control" id="right-control" href="#text-carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
+    <%= image_tag("arrow.png") %>
   </a>
-
 </div>
 
 

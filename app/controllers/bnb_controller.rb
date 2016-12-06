@@ -6,4 +6,5 @@ class BnbController < ApplicationController
 		render :home
 	end
 
+	
 end

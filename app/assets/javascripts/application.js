@@ -15,20 +15,12 @@
 //= require twitter/bootstrap
 //= require turbolinks
 
+//= require prism
+
 //= require_tree .
 
 
-
-
-
-
-console.log("It's working");
-
-
-
-
-
-
+// Prism.highlightElement($('.language-ruby')[0]);
 
 
 

@@ -6,31 +6,78 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-launch = Path.create!(name: "launch")
+launch = Path.create!(name: "launch", destination: "/bnb");
 
-launch.slides.create!(name: "first slide", content: "<p>Rails.application.routes.draw do</p><br><br>
+launch.slides.create!(name: "first slide", content: "Rails.application.routes.draw do
 
-<p>root 'main#show'</p><br><br>
+root 'main#show'
 
-<p>resources :bnb</p><br><br>
+resources :bnb
 
-<p>scope '/api' do</p><br>
-	<p>resources :paths</p><br>
-<p>end</p><br><br>
+scope '/api' do
+	resources :paths
+end
 
-<p>end</p>")
+end")
 
-launch.slides.create!(name: "second slide", content: "<p>class MainController < ApplicationController</p><br><br>
+launch.slides.create!(name: "second slide", content:"class MainController < ApplicationController
 
 
-	<p>def show</p>
-	<br><br>
-
-		<p>render :home</p><br>
-	<p>end</p><br>
-<p>end</p>
+	def show
+		@destination = Path.first.destination
+		render :home
+	end
+end
 ")
 launch.slides.create!(name: "third slide", content: "
+<%= render partial: 'shared/header' %>
 
+<div class='slider'>
+	
+</div>
+
+<div class='content'>
+	<h4>Bookings</h4>
+
+	<div class='listings'>
+	   <div class='table'>
+
+        <div class='listing'>
+        	<div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+        <div class='listing'>
+            <div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+        <div class='listing'>
+            <div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+
+        <div class='listing'>
+            <div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+        <div class='listing'>
+            <div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+
+        <div class='listing'>
+            <div class='img'></div>
+            <h3>Project Title</h3>
+        </div>
+
+        
+   		 </div>
+		
+	</div>
+</div>
 ")
 launch.slides.create!(name: "fourth slide", content: "This is the fourth shit blah blah blah")
