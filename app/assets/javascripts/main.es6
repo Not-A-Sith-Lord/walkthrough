@@ -1,6 +1,6 @@
 // console.log("Main JS loading");
  
-$(document).ready(function(){
+$(document).on('turbolinks:load',function(){
 
 
 	$('#text-carousel').bind('slid.bs.carousel', function (e) {
@@ -50,34 +50,8 @@ function niceFetch(results){
 
 	results.slides.forEach(function(object){
 		var content = object.content;
-
-		var styledContent;
-		if (i == 0){
-			 styledContent = ` <div class="item active">
-                    <div class="carousel-content">
-                        <pre>
-                        	<code class="language-ruby" >
-                            ${content}
-                            </code>
-                        </pre>
-                    </div>
-                </div>`;
-                i = i + 1;
-                console.log(i);
-
-		} else {
-			 styledContent = ` <div class="item">
-                    <div class="carousel-content">
-                        <pre data-line="4">
-                        	<code class="language-ruby" >
-                            ${content}
-                            </code>
-                        </pre>
-                    </div>
-                </div>`;
-		}
 		
-		$(".carousel-inner").append(styledContent);
+		$(".carousel-inner").append(content);
 		// stuff.push(styledContent);
 		Prism.highlightAll();
 	});

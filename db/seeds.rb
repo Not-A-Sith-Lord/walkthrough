@@ -8,19 +8,69 @@
 
 launch = Path.create!(name: "launch", destination: "/bnb");
 
-launch.slides.create!(name: "first slide", content: "Rails.application.routes.draw do
+launch.slides.create!(name: "first slide", content: "
+<div class='item active'>
+	<div class='heading'>
+		<h3>Rails Routes</h3>
+		<h4>AKA the internal directory</h4>
+	</div>
 
-root 'main#show'
+                    <div class='carousel-content'>
+                        <pre>
+                        	<code class='language-ruby'>
+Rails.application.routes.draw do
 
-resources :bnb
+	root 'main#show'
 
-scope '/api' do
-	resources :paths
+	resources :bnb
+
+	scope '/api' do
+		resources :paths
+	end
+
 end
+ </code>
+                        </pre>
+                    </div>
+                </div>");
 
-end")
+launch.slides.create!(name: "second slide", content:"
+	<div class='item'>
+	<div class='heading'>
+		<h3>Rails Routes</h3>
+		<h4>URL request matches defined route</h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre data-line='5'>
+                        	<code class='language-ruby' >
+Rails.application.routes.draw do
 
-launch.slides.create!(name: "second slide", content:"class MainController < ApplicationController
+	root 'main#show'
+
+	resources :bnb
+
+	scope '/api' do
+		resources :paths
+	end
+
+end
+ </code>
+                        </pre>
+                    </div>
+                </div>
+")
+
+launch.slides.create!(name: "third slide", content:"
+<div class='item'>
+	<div class='heading'>
+		<h3>Main Controller</h3>
+		<h4>Program is routed to controller called 'main'</h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre>
+                        	<code class='language-ruby' >
+
+	class MainController < ApplicationController
 
 
 	def show
@@ -28,9 +78,46 @@ launch.slides.create!(name: "second slide", content:"class MainController < Appl
 		render :home
 	end
 end
+
+
+ </code>
+                        </pre>
+                    </div>
+                </div>
+");
+
+launch.slides.create!(name: "fourth slide", content:"
+<div class='item'>
+                    <div class='carousel-content'>
+                        <pre data-line='9'>
+                        	<code class='language-ruby' >
+
+	class MainController < ApplicationController
+
+
+	def show
+		@destination = Path.first.destination
+		render :home
+	end
+end
+
+
+ </code>
+                        </pre>
+                    </div>
+                </div>
 ")
+
 launch.slides.create!(name: "third slide", content: "
+	<div class='item'>
+                    <div class='carousel-content'>
+                        <pre>
+                        	<code class='language-ruby' >
 <%= render partial: 'shared/header' %>
+</code></pre>
+
+ <pre>
+        <code class='language-markup' >
 
 <div class='slider'>
 	
@@ -79,5 +166,10 @@ launch.slides.create!(name: "third slide", content: "
 		
 	</div>
 </div>
-")
-launch.slides.create!(name: "fourth slide", content: "This is the fourth shit blah blah blah")
+
+
+ </code>
+                        </pre>
+                    </div>
+                </div>
+");

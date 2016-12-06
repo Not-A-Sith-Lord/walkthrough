@@ -84,6 +84,13 @@ body {
 
 /* slide wizardy */
 
+
+#text-carousel {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+
+
 .carousel-content {
     color:black;
     display:flex;
@@ -93,12 +100,6 @@ body {
 
 .carousel .row {
 	height: 100%;
-}
-
-#text-carousel {
-  width: 100%;
-  height: 100%;
-  padding: 0px;
 }
 
 .carousel-control {
@@ -123,11 +124,6 @@ display: inline-block;
     height:100%;
 }
 
-pre {
-	width: 100%;
-	height: 100%;
-	border: none;
-}
 
 .height-window, .carousel-content {
 	height: 100%;
@@ -160,7 +156,22 @@ pre {
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
 }
+}
+pre {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
 
+
+pre code {
+	font-size: 16px;
+}
+
+.heading {
+	color: white;
+	text-align: center;
+}
 
 
 
