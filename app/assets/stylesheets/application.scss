@@ -20,7 +20,7 @@
  /* Meta App Styling */
 
 header {
-	height: 5%;
+	height: 6%;
 	margin: 0;
 	padding: 0;
 }
@@ -30,6 +30,7 @@ div {
 }
 
 header h2 {
+	padding-top: .8rem;
 	text-align: center;
 	margin: 0;
 }
@@ -43,11 +44,13 @@ body {
 
 .walkthrough, .bnb {
 
-	height: 95%;
+	height: 94%;
 	display: inline-block;
 	background-color: #272822;
 	padding: .5rem; /* Controls Screen borders */
 	border: 1px solid black;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .walkthrough {
@@ -60,7 +63,7 @@ body {
 .bnb {
 	background-color: white;
 	padding: 0;
-	overflow-y: scroll;
+	
 }
 .bnb-header {
 	background-color: grey;
@@ -85,7 +88,7 @@ body {
 /* slide wizardy */
 
 
-#text-carousel {
+#walkthrough-carousel {
   width: 100%;
   height: 100%;
   padding: 0px;
@@ -96,18 +99,31 @@ body {
     display:flex;
     align-items:center;
     width: 100%;
+
 }
 
+.item {
+	
+
+}
 .carousel .row {
 	height: 100%;
 }
 
-.carousel-control {
-	position: absolute;
-top: 80%; /* pushes the icon in the middle of the height */
+#right-control, #launch-code {
+position: fixed;
+top: 85%; /* pushes the icon in the middle of the height */
 z-index: 5;
 display: inline-block;
 
+}
+
+#left-control{
+position: fixed;
+top: 85%;
+left: 50%;
+z-index: 5;
+display: inline-block;
 }
 
 #left-control, #right-control {
@@ -140,7 +156,7 @@ display: inline-block;
 	font-size:60px;
 }
 
-#left-control {
+#left-control img{
 
 -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -149,7 +165,7 @@ display: inline-block;
     transform: rotate(90deg);
 }
 
-#right-control {
+#right-control img{
 	-webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
@@ -157,15 +173,18 @@ display: inline-block;
     transform: rotate(-90deg);
 }
 }
+
 pre {
 	width: 100%;
 	height: 100%;
 	border: none;
+
 }
 
 
 pre code {
 	font-size: 16px;
+
 }
 
 .heading {

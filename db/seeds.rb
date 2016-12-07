@@ -112,60 +112,56 @@ launch.slides.create!(name: "third slide", content: "
 	<div class='item'>
                     <div class='carousel-content'>
                         <pre>
-                        	<code class='language-ruby' >
-<%= render partial: 'shared/header' %>
-</code></pre>
-
- <pre>
         <code class='language-markup' >
+&lt;%= render partial: 'shared/header' %>
 
-<div class='slider'>
+ &lt;div class='slider'>
 	
-</div>
+ &lt;/div>
 
-<div class='content'>
-	<h4>Bookings</h4>
+ &lt;div class='content'>
+	 &lt;h4>Bookings &lt;/h4>
 
-	<div class='listings'>
-	   <div class='table'>
+	 &lt;div class='listings'>
+	    &lt;div class='table'>
 
-        <div class='listing'>
-        	<div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
+         &lt;div class='listing'>
+        	 &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
 
-        <div class='listing'>
-            <div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
+         &lt;div class='listing'>
+             &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
 
-        <div class='listing'>
-            <div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
-
-
-        <div class='listing'>
-            <div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
-
-        <div class='listing'>
-            <div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
+         &lt;div class='listing'>
+             &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
 
 
-        <div class='listing'>
-            <div class='img'></div>
-            <h3>Project Title</h3>
-        </div>
+         &lt;div class='listing'>
+             &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
+
+         &lt;div class='listing'>
+             &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
+
+
+         &lt;div class='listing'>
+             &lt;div class='img'> &lt;/div>
+             &lt;h3>Project Title &lt;/h3>
+         &lt;/div>
 
         
-   		 </div>
+   		  &lt;/div>
 		
-	</div>
-</div>
+	&lt;/div>
+&lt;/div>
 
 
  </code>

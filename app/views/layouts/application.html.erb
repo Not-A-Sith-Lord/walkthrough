@@ -15,27 +15,30 @@
   	</header>
 
   	 <div class="bnb col-md-6"> 
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     	<%= yield %>
      </div> 
 
     <div class="walkthrough col-md-6">
       
 
-<div id="text-carousel" class="carousel slide hidden " data-ride="carousel">
+<div id="walkthrough-carousel" class="carousel slide hidden " data-ride="carousel">
 
     <div class="row">
         <div class="height-window col-xs-12">
-            <div class="carousel-inner">
-                
+            <div class="carousel-inner" id="carousel-content">
+                <div class="item active"></div>
+                <div class="item"></div>
                 
             </div>
         </div>
     </div>
     <!-- controls -->
-     <a class="left carousel-control" id="left-control" href="#text-carousel" data-slide="prev">
+     <a class="left carousel-control" id="left-control" href="#walkthrough-carousel" data-slide="prev">
     <%= image_tag("arrow.png") %>
   </a>
- <a class="right carousel-control" id="right-control" href="#text-carousel" data-slide="next">
+ <a class="right carousel-control" id="right-control" href="#walkthrough-carousel" data-slide="next">
     <%= image_tag("arrow.png") %>
   </a>
 </div>
@@ -43,6 +46,7 @@
 
 
     </div>
+
 
 <!-- Crazy Javascript Stuff -->
 

@@ -2,9 +2,13 @@
   		<header class="bnb-header">
   			<h3>StarBnB</h3>
   			<ul class="tabs">
-  				<li>Become a Host</li>
-  				<li>Help</li>
+  			<!-- 	<li>Become a Host</li>
+  				<li>Help</li> -->
+  				<% if user_signed_in? %>
+  				<li>Log Out</li>
+  				<% else %>
   				<li>Sign Up</li>
   				<li>Log In</li>
+  				<% end %>
   			</ul>
   		</header>
