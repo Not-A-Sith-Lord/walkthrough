@@ -1,7 +1,7 @@
 
-$(document).on('turbolinks:load',function(){
+$(document).on('turbolinks:load', function(){
 
-$('.carousel').carousel({
+$('#bnb-Carousel').carousel({
     interval: 5000,
     wrap: true
 }); 

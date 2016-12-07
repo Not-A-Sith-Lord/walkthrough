@@ -10,17 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require prism
+//= require universal
 //= require turbolinks
 
-//= require prism
+
 
 //= require_tree .
 
 
-// Prism.highlightElement($('.language-ruby')[0]);
+
 
 
 

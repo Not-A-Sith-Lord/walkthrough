@@ -36,7 +36,7 @@ $(document).on('turbolinks:load',function(){
 
 	});
 
-	
+	});
 // End Doc Load
 
 
@@ -79,32 +79,8 @@ function badFetch(error){
 //End Bad Fetch
 
 function hideButton(){
-	$(".launch-btn").html("<div class='launch-btn'>Loading Page...</div>");
+	$(".intro").html("<div class='hi'>Loading Page...</div>");
 }
 
-// function checkSlide()                        // check function
-// {
-
-// 	console.log("Check slide being called");
-//   var $this = $('#text-carousel');
-
-//   if($('.carousel-inner .item:first').hasClass('active')) {
-//   	console.log("First item being identified");
-//     $this.children('.left.carousel-control').hide();
-//   } else if($('.carousel-inner .item:last').hasClass('active')) {
-//   	console.log("Second else statement");
-//   	$(".execute-button").show();
-//     $this.children('.right.carousel-control').hide();
-//   } else {
-//   	console.log("Final Else statement");
-//   	$(".execute-button").hide();
-//     $this.children('.carousel-control').show();
-
-//   } 
-// }
-
-//End Check Slide
 
 
-
-});
