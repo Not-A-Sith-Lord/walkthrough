@@ -5,10 +5,10 @@
   			<!-- 	<li>Become a Host</li>
   				<li>Help</li> -->
   				<% if user_signed_in? %>
-  				<li>Log Out</li>
+  				<li><%= link_to 'Log Out', destroy_user_session_path, method: "DELETE" %></li>
   				<% else %>
   				<li>Sign Up</li>
-  				<li>Log In</li>
+  				<li><%= link_to 'Log In', new_user_session_path %></li>
   				<% end %>
   			</ul>
   		</header>

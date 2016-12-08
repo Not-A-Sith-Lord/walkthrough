@@ -64,3 +64,99 @@
     text-align: center;
    
 }
+
+// Sign Up Page //
+
+.signup, .signin {
+
+
+.signup-heading, .signin-heading {
+    width: 100%;
+    text-align: center;
+    background-color: #edefed;
+    padding: 1rem 0 1rem 0;
+    color: #484848;
+}
+
+.signup-body {
+    padding: 2rem;
+}
+
+p { 
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+
+.field {
+        padding: .4rem 0 .4rem 0;
+}
+input {
+    width: 100%;
+    height: 40px;
+
+}
+
+.actions input {
+    height: 63px;
+    color: white;
+    background-color: #ff5a5f;
+    border-radius: 4px;
+}
+
+.disclaimer {
+    padding-top: 4rem;
+    text-align: center;
+    p {
+        font-size: .85em;
+    }
+}
+
+.bottom-link {
+    padding-top: 3rem;
+
+    p, button {
+        display: inline;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        color: #ff5a5f;
+        border: 1px solid #ff5a5f;
+        width: 80px;
+        height: 34px;
+        background-color: white;
+    a {
+        text-decoration: none;
+        color: #ff5a5f;
+    }
+    }
+
+
+}
+
+//end sign up bracket
+}
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

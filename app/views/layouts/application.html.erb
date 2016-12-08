@@ -15,8 +15,10 @@
   	</header>
 
   	 <div class="bnb col-md-6"> 
+     <% if devise_error_messages! %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+    <% end %>
     	<%= yield %>
      </div> 
 

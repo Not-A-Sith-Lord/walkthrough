@@ -2,10 +2,6 @@
  
 $(document).on('turbolinks:load',function(){
 
-
-	
-
-
 	$(".launch-btn").on("click", function(){
 		hideButton();
 		$.ajax({
@@ -18,11 +14,6 @@ $(document).on('turbolinks:load',function(){
 	});
 
 	
-// End Doc Load
-
-
-
-//End Nice Fetch
 
 
 
