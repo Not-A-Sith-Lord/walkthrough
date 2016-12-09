@@ -1,0 +1,24 @@
+
+	<div class='item'>
+	<div class='heading'>
+		<h3>Rails Routes</h3>
+		<h4>URL request matches defined route</h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre data-line='5'>
+                        	<code class='language-ruby' >
+Rails.application.routes.draw do
+
+	root 'main#show'
+
+	resources :bnb
+
+	scope '/api' do
+		resources :paths
+	end
+
+end
+ </code>
+                        </pre>
+                    </div>
+                </div>

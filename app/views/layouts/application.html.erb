@@ -15,32 +15,55 @@
   	</header>
 
   	 <div class="bnb col-md-6"> 
-     <% if devise_error_messages! %>
+     <% if user_signed_in? %> 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    <% end %>
+     <% end %> 
     	<%= yield %>
      </div> 
 
     <div class="walkthrough col-md-6">
       
 
-<div id="walkthrough-carousel" class="carousel slide hidden " data-ride="carousel">
+<div id="walkthrough-carousel" class="carousel slide" data-ride="carousel">
 
     <div class="row">
         <div class="height-window col-xs-12">
             <div class="carousel-inner" id="carousel-content">
-                <div class="item active"></div>
-                <div class="item"></div>
-                
-            </div>
+
+              <div class='item active'>
+                <div class='heading'>
+                  <h3>Rails Routes</h3>
+                  <h4>AKA the internal directory</h4>
+                </div>
+
+                <div class='carousel-content'>
+                  <pre>
+                    <code class='language-ruby'>
+                    Rails.application.routes.draw do
+
+                      root 'main#show'
+
+                          resources :bnb
+
+                          scope '/api' do
+                            resources :paths
+                          end
+
+                        end
+                    </code>
+                  </pre>
+                </div>
+              </div>
+
+
         </div>
     </div>
     <!-- controls -->
-     <a class="left carousel-control" id="left-control" href="#walkthrough-carousel" data-slide="prev">
+     <a class="left carousel-control hidden" id="left-control" href="#walkthrough-carousel" data-slide="prev">
     <%= image_tag("arrow.png") %>
   </a>
- <a class="right carousel-control" id="right-control" href="#walkthrough-carousel" data-slide="next">
+ <a class="right carousel-control hidden" id="right-control" href="#walkthrough-carousel" data-slide="next">
     <%= image_tag("arrow.png") %>
   </a>
 </div>

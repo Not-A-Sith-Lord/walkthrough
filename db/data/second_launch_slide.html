@@ -1,0 +1,23 @@
+<div class='item'>
+	<div class='heading'>
+		<h3>Main Controller</h3>
+		<h4>Program is routed to controller called 'main'</h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre>
+                        	<code class='language-ruby' >
+
+	class MainController < ApplicationController
+
+
+	def show
+		@destination = Path.first.destination
+		render :home
+	end
+end
+
+
+ </code>
+                        </pre>
+                    </div>
+                </div>

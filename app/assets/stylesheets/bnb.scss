@@ -76,9 +76,10 @@
     background-color: #edefed;
     padding: 1rem 0 1rem 0;
     color: #484848;
+    border: 1px solid #dce0e0;
 }
 
-.signup-body {
+.signup-body, .signin-body{
     padding: 2rem;
 }
 
@@ -109,6 +110,17 @@ input {
     text-align: center;
     p {
         font-size: .85em;
+    }
+}
+
+.signin-options {
+    input {
+        width: 17px;
+        height: 17px;
+    }
+    a {
+        float: right;
+        font-size: 16px;
     }
 }
 

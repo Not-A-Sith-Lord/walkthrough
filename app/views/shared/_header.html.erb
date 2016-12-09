@@ -7,8 +7,8 @@
   				<% if user_signed_in? %>
   				<li><%= link_to 'Log Out', destroy_user_session_path, method: "DELETE" %></li>
   				<% else %>
-  				<li>Sign Up</li>
-  				<li><%= link_to 'Log In', new_user_session_path %></li>
+  				<li id="js-signup">Sign Up</li>
+  				<li id="js-login"><%= link_to 'Log In', new_user_session_path %></li>
   				<% end %>
   			</ul>
   		</header>
