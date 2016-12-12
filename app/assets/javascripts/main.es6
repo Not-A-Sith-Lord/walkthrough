@@ -2,7 +2,7 @@
  
 $(document).on('turbolinks:load',function(){
 
-	$(".launch-btn").on("click", function(){
+	$(".js-home").on("click", function(){
 		hideButton();
 		$.ajax({
 			type: "GET",

@@ -1,3 +1,5 @@
+<%= render partial: "shared/header" %>
+
 <div class="signin">
 <div class="signin-heading">
   <h4>Log in</h4>
@@ -22,7 +24,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", :id => 'js-login-submit' %>
   </div>
 <% end %>
 

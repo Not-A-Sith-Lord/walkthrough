@@ -12,11 +12,10 @@ $('#walkthrough-carousel').carousel({
 	    var index = $(e.target).find(".active").index();
 	    	console.log("The number of current index is: " + index);
 	    if(index === (count - 1)){
-	    	console.log()
 	    	$("#launch-code").show();
 	    	$('#right-control').hide();
 	    } else if ( index === 0){
-	    	$(this).children('#left-control').hide();
+	    	$('#left-control').hide();
 	    } else {
 	    	$("#launch-code").hide();
 	    	$('#right-control, #left-control').show();
@@ -43,8 +42,6 @@ function niceFetch(results){
 		// stuff.push(styledContent);
 		
 	});
-	
-
 	
 	$("#right-control, #left-control").removeClass("hidden");
 	$('#left-control').hide();
