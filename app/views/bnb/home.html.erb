@@ -13,7 +13,7 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('assets/galaxy.jpeg');"></div>
                 <div class="carousel-caption">
                     <h2>700,000 bookings every second around the galaxy!</h2>
                 </div>
@@ -64,6 +64,81 @@
 	</div>
 </div>
 
+<% content_for :walkthrough do %>
+
+    <div class='item active'>
+    <div class='heading'>
+        <h3>Dynamically Generated HTML</h3>
+        <h4>Executed server side before being sent to browser</h4>
+    </div>
+                    <div class='carousel-content'>
+<!-- //////////////////////// CODE ////////////////////// -->
+                        <pre data-keep-tags="js-header, js-listing">
+                            <code class='html' >
+<js-header>&lt;%= render partial: "shared/header" %&gt;</js-header>
+
+&lt;div class="slider">
+     &lt;header id="bnb-Carousel" class="carousel slide">
+        &lt;!-- Indicators -->
+        &lt;ol class="carousel-indicators">
+            &lt;li data-target="#myCarousel" data-slide-to="0" class="active">&lt;/li>
+            &lt;li data-target="#myCarousel" data-slide-to="1">&lt;/li>
+            &lt;li data-target="#myCarousel" data-slide-to="2">&lt;/li>
+        &lt;/ol>
+
+        &lt;!-- Wrapper for Slides -->
+        &lt;div class="carousel-inner">
+            &lt;div class="item active">
+                &lt;!-- Set the first background image using inline CSS below. -->
+                &lt;div class="fill" style="background-image:url('assets/galaxy.jpeg');">&lt;/div>
+                &lt;div class="carousel-caption">
+                    &lt;h2>700,000 bookings every second around the galaxy!&lt;/h2>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="item">
+                &lt;!-- Set the second background image using inline CSS below. -->
+                &lt;div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');">&lt;/div>
+                &lt;div class="carousel-caption">
+                    &lt;h2>Caption 2&lt;/h2>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="item">
+                &lt;!-- Set the third background image using inline CSS below. -->
+                &lt;div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');">&lt;/div>
+                &lt;div class="carousel-caption">
+                    &lt;h2>Caption 3&lt;/h2>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+
+
+&lt;/header>
+    
+&lt;/div>
+
+&lt;div class="content">
+    &lt;h4>Bookings&lt;/h4>
+
+    &lt;div class="listings">
+       &lt;div class="table">
+<js-listing>
+       &lt;% @listing_sample.each do |listing| %>
+            &lt;div class="listing">
+                &lt;div class="img">&lt;/div>
+                &lt;h3>&lt;%= listing.name %>&lt;/h3>
+            &lt;/div>
+        &lt;% end %>
+</js-listing>
+         &lt;/div>
+        
+    &lt;/div>
+&lt;/div>
+ &lt;/code>
+                        &lt;/pre>
+                    &lt;/div>
+                &lt;/div>
+
+<% end %>
 
 
 

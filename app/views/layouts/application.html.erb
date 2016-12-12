@@ -31,40 +31,7 @@
         <div class="height-window col-xs-12">
             <div class="carousel-inner" id="carousel-content">
 
-              <div class='item active'>
-                <div class='heading'>
-                  <h3>Rails Routes</h3>
-                  <h4>AKA the internal directory</h4>
-                </div>
-
-                <div class='carousel-content'>
-                  <pre>
-                    <code class='language-ruby'>
-                    Rails.application.routes.draw do
-
-                      root 'main#show' blah
-
-                          resources :bnb </code></pre>
-                          <pre>
-                          <code id="js-troll" class="js-\">
-                          %= resources %
-                          </code>
-                          </pre>
-
-                          <pre><code class="language-ruby">
-
-                          scope '/api' do
-                            resources :paths
-                          end
-
-                        end
-                    </code>
-                  </pre>
-                  <span class="token string"></span>
-                </div>
-              </div>
-
-
+              <%= yield :walkthrough %>
         </div>
     </div>
     <!-- controls -->

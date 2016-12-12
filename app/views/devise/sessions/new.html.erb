@@ -38,6 +38,43 @@
 </div>
 
 
+<% content_for :walkthrough do %>
+
+    <div class='item active'>
+    <div class='heading'>
+        <h3>Rails Routes</h3>
+        <h4>URL request matches defined route</h4>
+    </div>
+                    <div class='carousel-content'>
+                        <pre>
+                            <code class='ruby' >
+Rails.application.routes.draw do
+
+  
+
+root "main#show" 
+
+devise_for :users
+resources :bnb
+
+scope "/api" do
+  resources :paths
+end
+
+
+end
+
+'new form view'
+
+ </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+<% end %>
+
+
 
 
 

@@ -1,6 +1,18 @@
 
 $(document).on('turbolinks:load', function(){
 
+$("js-header").hover(function(){
+	console.log("hovering");
+	$(".bnb-header").toggleClass("highlight");
+});
+
+$("js-listing").hover(function(){
+	console.log("hovering");
+	$(".listing").toggleClass("highlight");
+});
+
+
+
 $('#bnb-Carousel').carousel({
     interval: 5000,
     wrap: true
@@ -41,7 +53,7 @@ $("#js-login").on("click", function(){
 		hideButton();
 		$.ajax({
 			type: "GET",
-			url: "/api/paths/4",
+			url: "/api/paths/2",
 			success: niceFetch,
 			error: badFetch
 		})
@@ -54,7 +66,7 @@ $("#js-login-submit").on("click", function(e){
 		hideButton();
 		$.ajax({
 			type: "GET",
-			url: "/api/paths/3",
+			url: "/api/paths/4",
 			success: function (results) {
 				niceFetch(results);
 				$("#launch-code").on("click", function(e){

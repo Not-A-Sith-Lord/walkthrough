@@ -15,7 +15,14 @@
 
  *= require_self
  */
+/* important walkthrough styling */
 
+.highlight {
+	border: 3px solid yellow;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
 
  /* Meta App Styling */
 
