@@ -1,32 +1,28 @@
-
 <div class='item'>
-                    <div class='carousel-content'>
-                        <pre data-line='9'>
-                          <code class='html' >
-
-  &lt;div class="content">
-  &lt;h4>Bookings&lt;/h4>
-
-  &lt;div class="listings">
-     &lt;div class="table">
-
-       &lt;% @listing_sample.each do |listing| %>
-            &lt;div class="listing">
-              &lt;div class="img">&lt;/div>
-                &lt;h3>&lt;%= listing.name %>&lt;/h3>
-            &lt;/div>
-        &lt;% end %>
-
-       &lt;/div>
     
-  &lt;/div>
-&lt;/div>
+    <div class='heading'>
+        <h3>The Main Controller</h3>
+        <h4>Controllers contain different actions that call on <span class="orange">database shit</span> and business logic, to be <span class="green">rendered</span> on the appropriate web page</h4>
+    </div>
+                    <div class='carousel-content'>
+                        <pre data-keep-tags="render, db">
+                          <code class='ruby' >
 
+  class MainController < ApplicationController
+
+
+  def show
+
+   <db> @topPromotions = CurrentPromotions.all
+    @listing_sample = listings[1..6]
+    listings = Listing.all</db>
+   
+    <render>render :home</render>
+  end
+end
 
 
  </code>
                         </pre>
                     </div>
                 </div>
-
-

@@ -17,8 +17,44 @@
  */
 /* important walkthrough styling */
 
-.highlight {
+.yellow {
+	color: yellow;
+}
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.green {
+	color: green;
+}
+
+.highlight, ctrl {
 	border: 3px solid yellow;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+act {
+	border: 3px solid red;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+render {
+	border: 3px solid green;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+db {
+	border: 3px solid orange;
 	background: rgba(39,62,84,0.82);
     overflow: hidden;
     z-index: 2;

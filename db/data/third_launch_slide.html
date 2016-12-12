@@ -1,12 +1,17 @@
 <div class='item'>
+    
+    <div class='heading'>
+        <h3>The Main Controller</h3>
+        <h4>Controllers contain different actions that call on database shit and business logic, to be rendered on the web page</h4>
+    </div>
                     <div class='carousel-content'>
-                        <pre data-line='9'>
+                        <pre data-keep-tags="ctrl, act">
                         	<code class='ruby' >
 
-	class MainController < ApplicationController
+	class <ctrl>MainController</ctrl> < ApplicationController
 
 
-	def show
+	def <act>show</act>
 		@destination = Path.first.destination
 		render :home
 	end

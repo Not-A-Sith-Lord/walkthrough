@@ -25,15 +25,15 @@ Listing.create!(name: "Quaint Moisture Farm6", planet: "Tatooine", price: 50, de
 launch = Path.create!(name: "launch", destination: "/bnb"); #1
 
 #same initial slide
-launch.slides.create!(name: "third slide", content: File.read("db/data/second_launch_slide.html"));
-# Highlight "root" line
 launch.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
+# Highlight "root" line
+launch.slides.create!(name: "first slide", content: File.read("db/data/second_launch_slide.html"));
 # Emphasize controller, and action
-launch.slides.create!(name: "third slide", content: File.read("db/data/second_launch_slide.html"));
+launch.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
 #Go to controller, emphasize corrosponding name and action
-launch.slides.create!(name: "fourth slide", content: File.read("db/data/third_launch_slide.html"));
+launch.slides.create!(name: "fourth slide", content: File.read("db/data/fourth_launch_slide.html"));
 #emphasize database variables
-launch.slides.create!(name: "third slide", content: File.read("db/data/fourth_launch_slide.html"));
+#launch.slides.create!(name: "third slide", content: File.read("db/data/fourth_launch_slide.html"));
 #emphasize render
 
 #initial view with corresponding elements

@@ -11,6 +11,12 @@ $("js-listing").hover(function(){
 	$(".listing").toggleClass("highlight");
 });
 
+$("js-promotions").hover(function(){
+	console.log("hovering");
+	$("#js-promotions").toggleClass("highlight");
+});
+
+
 
 
 $('#bnb-Carousel').carousel({

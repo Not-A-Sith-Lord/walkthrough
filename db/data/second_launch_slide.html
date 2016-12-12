@@ -1,4 +1,4 @@
-<div class='item'>
+<!-- <div class='item'>
 	<div class='heading'>
 		<h3>Main Controller</h3>
 		<h4>Program is routed to controller called 'main'</h4>
@@ -17,6 +17,29 @@
 end
 
 
+ </code>
+                        </pre>
+                    </div>
+                </div> -->
+                <div class='item '>
+	<div class='heading'>
+		<h3>Rails Routes</h3>
+		<h4>Root routes to a <span class="yellow">Controller</span> named "main", and to an <span class="red">Action</span> called "show" </h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre data-keep-tags="ctrl, act">
+                        	<code class='ruby' >
+Rails.application.routes.draw do
+
+   root '<ctrl>main</ctrl>#<act>show</act>'
+
+   resources :bnb
+
+   scope '/api' do
+	   resources :paths
+   end
+
+end
  </code>
                         </pre>
                     </div>

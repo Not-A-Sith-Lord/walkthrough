@@ -10,7 +10,7 @@
         </ol>
 
         <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="js-promotions">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('assets/galaxy.jpeg');"></div>
@@ -73,7 +73,7 @@
     </div>
                     <div class='carousel-content'>
 <!-- //////////////////////// CODE ////////////////////// -->
-                        <pre data-keep-tags="js-header, js-listing">
+                        <pre data-keep-tags="js-header, js-listing, js-promotions">
                             <code class='html' >
 <js-header>&lt;%= render partial: "shared/header" %&gt;</js-header>
 
@@ -88,27 +88,22 @@
 
         &lt;!-- Wrapper for Slides -->
         &lt;div class="carousel-inner">
-            &lt;div class="item active">
-                &lt;!-- Set the first background image using inline CSS below. -->
-                &lt;div class="fill" style="background-image:url('assets/galaxy.jpeg');">&lt;/div>
+           <js-promotions>
+            &lt;% @topPromotions.each do |promotion| %>
+
+                    &lt;% if promotion == @topPromotions[1] %>
+                    &lt;div class="item active">
+                    &lt;% else %>
+                    &lt;div class="item ">
+                    &lt;% end %>
+                &lt;div class="fill" style="background-image:&lt;%= promotion.imageUrl;">&lt;/div>
                 &lt;div class="carousel-caption">
-                    &lt;h2>700,000 bookings every second around the galaxy!&lt;/h2>
+                    &lt;h2>&lt;%= promotion.title %>&lt;/h2>
                 &lt;/div>
             &lt;/div>
-            &lt;div class="item">
-                &lt;!-- Set the second background image using inline CSS below. -->
-                &lt;div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');">&lt;/div>
-                &lt;div class="carousel-caption">
-                    &lt;h2>Caption 2&lt;/h2>
-                &lt;/div>
-            &lt;/div>
-            &lt;div class="item">
-                &lt;!-- Set the third background image using inline CSS below. -->
-                &lt;div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');">&lt;/div>
-                &lt;div class="carousel-caption">
-                    &lt;h2>Caption 3&lt;/h2>
-                &lt;/div>
-            &lt;/div>
+
+            &lt;% end %>
+            </js-promotions>
         &lt;/div>
 
 
