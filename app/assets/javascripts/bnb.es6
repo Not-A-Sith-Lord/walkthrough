@@ -16,6 +16,21 @@ $("js-promotions").hover(function(){
 	$("#js-promotions").toggleClass("highlight");
 });
 
+$("emailz").hover(function(){
+	console.log("hovering");
+	$("#emailz").toggleClass("highlight");
+});
+
+$("pwdz").hover(function(){
+	console.log("hovering");
+	$("#pwdz").toggleClass("highlight");
+});
+
+$("send").hover(function(){
+	console.log("hovering");
+	$("#send").toggleClass("highlight");
+});
+
 
 
 

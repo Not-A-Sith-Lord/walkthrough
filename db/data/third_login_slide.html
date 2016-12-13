@@ -2,25 +2,25 @@
     
     <div class='heading'>
         <h3>The Sessions Controller</h3>
-        <h4>This is the <span class="yellow">"Sessions"</span> controller we've been directed to by User resources, and we're accessing the default <span class="red">"new"</span> method within it</h4>
+        <h4>A new "session" creates a new cookie to store in the browser, and identify a specific user. But first we need to find out which user it is through the log in form.</h4>
     </div>
                     <div class='carousel-content'>
-                        <pre data-keep-tags="ctrl, act">
+                        <pre data-keep-tags="render">
                           <code class='ruby' >
 
-  class <ctrl>SessionsController</ctrl> < ApplicationController
+  class SessionsController < ApplicationController
 
 
-  <act>def new</act>
+  def new
 
      self.resource = resource_class.new(sign_in_params)
     clean_up_passwords(resource)
     yield resource if block_given?
     respond_with(resource, serialize_options(resource))
 
-    render :login
+    <render>render :login</render>
    
- <act> end </act>
+  end 
   
 end
 

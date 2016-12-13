@@ -32,8 +32,13 @@
 	color: green;
 }
 
+.hi {
+	color: white;
+	font-size: 18px;
+}
+
 .highlight, ctrl {
-	border: 3px solid yellow;
+	border: 5px solid #ff0000;
 	background: rgba(39,62,84,0.82);
     overflow: hidden;
     z-index: 2;
@@ -65,7 +70,17 @@ db {
 .fake-link {
 	cursor: pointer;
 }
-
+	.intro {
+		margin-top: 20rem;
+		padding: .2rem;
+		width: 300px;
+		border-radius: 5%;
+		background-color: #ff5a5f;
+		h2 {
+		color: white;
+		font-weight: 700;
+	}
+}
 .meta-header {
 	height: 6%;
 	margin: 0;
@@ -112,6 +127,11 @@ body {
 
 
 /* StarBnB styling */
+
+.notice {
+	text-align: center;
+	color: #ff5a5f;
+}
 .logo {
 	color: #ff5a5f;
 }

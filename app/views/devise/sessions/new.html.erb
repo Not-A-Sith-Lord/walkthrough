@@ -8,11 +8,11 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
 
-    <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+    <%= f.email_field :email, autofocus: true, placeholder: "Email", id: "emailz" %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Password", id: "pwdz" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -24,7 +24,7 @@
   <% end -%>
 
   <div class="actions">
-    <%= f.submit "Log in", :id => 'js-login-submit' %>
+    <%= f.submit "Log in", :id => 'js-login-submit', id: "send" %>
   </div>
 <% end %>
 
@@ -42,29 +42,51 @@
 
     <div class='item active'>
     <div class='heading'>
-        <h3>Rails Routes</h3>
+        <h3>Form Helper View</h3>
         <h4>URL request matches defined route</h4>
     </div>
                     <div class='carousel-content'>
-                        <pre>
-                            <code class='ruby' >
-Rails.application.routes.draw do
+                        <pre data-keep-tags="emailz, pwdz, send">
+                            <code class='html' >
+                         
+&lt;%= render partial: "shared/header" %>
 
-  
+&lt;div class="signin">
+&lt;div class="signin-heading">
+  &lt;h4>Log in&lt;/h4>
+&lt;/div>
+&lt;div class="signin-body">
+&lt;%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-root "main#show" 
+  <emailz>&lt;div class="field">
+    &lt;%= f.email_field :email, autofocus: true, placeholder: "Email" %> 
+  &lt;/div></emailz>
 
-devise_for :users
-resources :bnb
+  <pwdz>&lt;div class="field">
+    &lt;%= f.password_field :password, autocomplete: "off", placeholder: "Password" %> 
+  &lt;/div></pwdz>
 
-scope "/api" do
-  resources :paths
-end
+  &lt;% if devise_mapping.rememberable? -%>
+    &lt;div class="field signin-options">
+      &lt;%= f.check_box :remember_me %>
+      &lt;%= f.label :remember_me %>
+      &lt;a href="#">Reset Password&lt;/a>
+    &lt;/div>
+  &lt;% end -%>
 
+ <send> &lt;div class="actions">
+    &lt;%= f.submit "Log in", :id => 'js-login-submit' %>
+  &lt;/div>
+&lt;% end %> </send>
 
-end
+&lt;div class="bottom-link">
+&lt;p>Don't have a StarBnB Account?&lt;/p>
+  &lt;button class="pull-right">Sign Up&lt;/button>
+&lt;/div>
 
-'new form view'
+&lt;/div>
+
+&lt;/div>
 
  </code>
                         </pre>

@@ -2,16 +2,16 @@
 	<div class='item active'>
 	<div class='heading'>
 		<h3>Rails Routes</h3>
-		<h4>The login link takes you to the "/users" subdomain, which is identified by the "users" controller.  </h4>
+		<h4>The login link takes you to the "/users/sign_in" subdomain, which directs to the Users resources tool.  </h4>
 	</div>
                     <div class='carousel-content'>
-                        <pre data-line="6-7">
+                        <pre data-line="6-7" data-keeps-tags=>
                         	<code class='ruby' >
 Rails.application.routes.draw do
 
    	root 'main#show'
 
-   	resources :users
+   	<ctrl>resources :users</ctrl>
 
    	resources :bookings
 

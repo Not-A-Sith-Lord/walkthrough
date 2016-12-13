@@ -41,11 +41,11 @@ launch.slides.create!(name: "fourth slide", content: File.read("db/data/fourth_l
 #initial view with corresponding elements
 signIn = Path.create!(name: "sign in", destination: "/users/sign_in"); #2
 
-signIn.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
+signIn.slides.create!(name: "first slide", content: File.read("db/data/first_login_slide.html"));
 # Highlight "root" line
-signIn.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
+signIn.slides.create!(name: "second slide", content: File.read("db/data/second_login_slide.html"));
 # Emphasize controller, and action
-signIn.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
+signIn.slides.create!(name: "third slide", content: File.read("db/data/third_login_slide.html"));
 #replace with routes and "http request" link to the server
 # #highlight corresponding controller and action 
 # signIn.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
