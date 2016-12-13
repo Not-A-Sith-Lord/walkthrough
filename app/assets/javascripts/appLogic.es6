@@ -53,6 +53,7 @@ function niceFetch(results){
 		$("#carousel-content").append(content);
 		
 		
+		
 	});
 
 	$("#right-control, #left-control").removeClass("hidden");
