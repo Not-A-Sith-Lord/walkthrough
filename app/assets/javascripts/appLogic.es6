@@ -58,7 +58,7 @@ function niceFetch(results){
 	$("#right-control, #left-control").removeClass("hidden");
 	$('#left-control').hide();
 
-	var executeButton = ` <a id="launch-code" class="right carousel-control" href="${results.destination}">Execute Code</a>`
+	var executeButton = ` <a id="launch-code" class="right carousel-control" href="${results.destination}">Render Page</a>`
 	$('#left-control').after(executeButton);
 
 	$('.ruby').addClass("language-ruby");

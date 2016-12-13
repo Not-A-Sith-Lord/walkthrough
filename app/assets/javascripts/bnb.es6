@@ -72,7 +72,7 @@ $("#js-login-submit").on("click", function(e){
 		hideButton();
 		$.ajax({
 			type: "GET",
-			url: "/api/paths/4",
+			url: "/api/paths/3",
 			success: function (results) {
 				niceFetch(results);
 				$("#launch-code").on("click", function(e){

@@ -27,47 +27,57 @@ launch = Path.create!(name: "launch", destination: "/bnb"); #1
 #same initial slide
 launch.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
 # Highlight "root" line
-launch.slides.create!(name: "first slide", content: File.read("db/data/second_launch_slide.html"));
+launch.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
 # Emphasize controller, and action
 launch.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
 #Go to controller, emphasize corrosponding name and action
-launch.slides.create!(name: "fourth slide", content: File.read("db/data/fourth_launch_slide.html"));
+#launch.slides.create!(name: "fourth slide", content: File.read("db/data/fourth_launch_slide.html"));
 #emphasize database variables
 #launch.slides.create!(name: "third slide", content: File.read("db/data/fourth_launch_slide.html"));
 #emphasize render
+launch.slides.create!(name: "fourth slide", content: File.read("db/data/fourth_launch_slide.html"));
+
 
 #initial view with corresponding elements
 signIn = Path.create!(name: "sign in", destination: "/users/sign_in"); #2
 
-#replace with routes and "http request" link to the server
 signIn.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
-#highlight corresponding controller and action 
+# Highlight "root" line
 signIn.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
+# Emphasize controller, and action
+signIn.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
+#replace with routes and "http request" link to the server
+# #highlight corresponding controller and action 
+# signIn.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
 #show "sessions" controller and emphasize corresponding controller name and action
 #show params searching database
 #show params jumping to home redirect if successful 
 
-signUp = Path.create!(name: "sign up", destination: "/users/sign_up"); #3
+signInSubmit = Path.create!(name: "sign in", destination: "/users/sign_in"); #3
+
+
+signInSubmit.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
+# Highlight "root" line
+signInSubmit.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
+# Emphasize controller, and action
+signInSubmit.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
+
+signUp = Path.create!(name: "sign up", destination: "/users/sign_up"); #4
 
 signUp.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
 signUp.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
 signUp.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
 signUp.slides.create!(name: "fourth slide", content: File.read("db/data/second_launch_slide.html"));
 
-signUpSubmit = Path.create!(name: "sign up submit", destination: ""); #4
+signUpSubmit = Path.create!(name: "sign up submit", destination: ""); #5
 
-signUpSubmit.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
-signUpSubmit.slides.create!(name: "second slide", content: File.read("db/data/first_launch_slide.html"));
-signUpSubmit.slides.create!(name: "third slide", content: File.read("db/data/first_launch_slide.html"));
-signUpSubmit.slides.create!(name: "fourth slide", content: File.read("db/data/first_launch_slide.html"));
+signUp.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
+# Highlight "root" line
+signUp.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
+# Emphasize controller, and action
+signUp.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
 
 
-logout = Path.create!(name: "sign up", destination: File.read("db/data/first_launch_slide.html")); #5
-
-logout.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
-logout.slides.create!(name: "second slide", content: File.read("db/data/first_launch_slide.html"));
-logout.slides.create!(name: "third slide", content: File.read("db/data/first_launch_slide.html"));
-logout.slides.create!(name: "fourth slide", content: File.read("db/data/first_launch_slide.html"));
 
 signOut = Path.create!(name: "sign out", destination: "/users/sign_out"); #6
 

@@ -2,19 +2,24 @@
     
     <div class='heading'>
         <h3>The Main Controller</h3>
-        <h4>Controllers contain different actions that call on database shit and business logic, to be rendered on the web page</h4>
+        <h4>This is the <span class="yellow">"Main"</span> controller we've been directed to, and we're accessing the <span class="red">"show"</span> method within it</h4>
     </div>
                     <div class='carousel-content'>
                         <pre data-keep-tags="ctrl, act">
-                        	<code class='ruby' >
+                          <code class='ruby' >
 
-	class <ctrl>MainController</ctrl> < ApplicationController
+  class <ctrl>MainController</ctrl> < ApplicationController
 
 
-	def <act>show</act>
-		@destination = Path.first.destination
-		render :home
-	end
+  <act>def show</act>
+
+    @topPromotions = CurrentPromotions.all
+    @listing_sample = listings[1..6]
+    listings = Listing.all
+   
+    render :home
+ <act> end </act>
+  
 end
 
 

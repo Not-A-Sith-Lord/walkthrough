@@ -66,20 +66,25 @@ db {
 	cursor: pointer;
 }
 
-header {
+.meta-header {
 	height: 6%;
 	margin: 0;
 	padding: 0;
+	border-bottom: 1px solid #cccccc;
 }
 div {
 	margin: 0;
 	padding: 0;
 }
 
-header h2 {
+#title-header {
 	padding-top: .8rem;
 	text-align: center;
 	margin: 0;
+	a {	font-weight: 700;
+		color:#f92672;
+		text-decoration: none;
+	}
 }
 
 body {
@@ -87,6 +92,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', georgia;
 }
 
 .walkthrough, .bnb {
@@ -95,7 +101,7 @@ body {
 	display: inline-block;
 	background-color: #272822;
 	padding: .5rem; /* Controls Screen borders */
-	border: 1px solid black;
+	
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -106,14 +112,16 @@ body {
 
 
 /* StarBnB styling */
-
+.logo {
+	color: #ff5a5f;
+}
 .bnb {
 	background-color: white;
 	padding: 0;
 	
 }
 .bnb-header {
-	background-color: grey;
+	background-color: white;
 	padding: .5rem;
 }
 
@@ -130,6 +138,17 @@ body {
 .tabs li {
 	display: inline-block;
 	padding: .3rem 0 0 3rem;
+}
+
+.listing {
+	width: 300px;
+	background-color: white;
+	img {
+		width: 100%;
+	}
+	h3{
+		margin-top: 1rem;
+	}
 }
 
 /* slide wizardy */
