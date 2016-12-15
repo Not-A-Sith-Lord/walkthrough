@@ -56,11 +56,9 @@ signIn.slides.create!(name: "third slide", content: File.read("db/data/third_log
 signInSubmit = Path.create!(name: "sign in", destination: "/users/sign_in"); #3
 
 
-signInSubmit.slides.create!(name: "first slide", content: File.read("db/data/first_launch_slide.html"));
+signInSubmit.slides.create!(name: "first slide", content: File.read("db/data/first_login_submit_slide.html"));
+signInSubmit.slides.create!(name: "first slide", content: File.read("db/data/second_login_submit_slide.html"));
 # Highlight "root" line
-signInSubmit.slides.create!(name: "second slide", content: File.read("db/data/second_launch_slide.html"));
-# Emphasize controller, and action
-signInSubmit.slides.create!(name: "third slide", content: File.read("db/data/third_launch_slide.html"));
 
 signUp = Path.create!(name: "sign up", destination: "/users/sign_up"); #4
 

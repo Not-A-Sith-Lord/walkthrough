@@ -3,32 +3,39 @@ $(document).on('turbolinks:load', function(){
 
 $("js-header").hover(function(){
 	console.log("hovering");
+	$("js-header").toggleClass("highlight");
 	$(".bnb-header").toggleClass("highlight");
+
 });
 
 $("js-listing").hover(function(){
 	console.log("hovering");
+	$("js-listing").toggleClass("highlight");
 	$(".listing").toggleClass("highlight");
 });
 
 $("js-promotions").hover(function(){
 	console.log("hovering");
+	$("js-promotions").toggleClass("highlight");
 	$("#js-promotions").toggleClass("highlight");
 });
 
 $("emailz").hover(function(){
 	console.log("hovering");
+	$("emailz").toggleClass("highlight");
 	$("#emailz").toggleClass("highlight");
 });
 
 $("pwdz").hover(function(){
 	console.log("hovering");
+	$("pwdz").toggleClass("highlight");
 	$("#pwdz").toggleClass("highlight");
 });
 
 $("send").hover(function(){
 	console.log("hovering");
-	$("#send").toggleClass("highlight");
+	$("send").toggleClass("highlight");
+	$("#js-login-submit").toggleClass("highlight");
 });
 
 

@@ -1,0 +1,21 @@
+ 	<div class='item active'>
+	<div class='heading'>
+		<h3>Creating User Sessions</h3>
+		<h4>The Devise gem authenticates the users input using the database lsit of users, and creates a cookie and reroutes to the home page.</h4>
+	</div>
+                    <div class='carousel-content'>
+                        <pre >
+                        	<code class='ruby' >
+
+ def create
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message!(:notice, :signed_in)
+    sign_in(resource_name, resource)
+    yield resource if block_given?
+    respond_with resource, location: after_sign_in_path_for(resource)
+end
+
+ </code>
+                        </pre>
+                    </div>
+                </div>

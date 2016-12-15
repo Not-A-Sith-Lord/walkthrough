@@ -37,11 +37,19 @@
 	font-size: 18px;
 }
 
-.highlight, ctrl {
+.highlight {
 	border: 5px solid #ff0000;
 	background: rgba(39,62,84,0.82);
     overflow: hidden;
     z-index: 2;
+}
+
+ctrl {
+	border: 3px solid yellow;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+
 }
 
 act {
@@ -66,6 +74,7 @@ db {
 }
 
  /* Meta App Styling */
+
 
 .fake-link {
 	cursor: pointer;
