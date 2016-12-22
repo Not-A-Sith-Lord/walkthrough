@@ -1,14 +1,23 @@
 
   		<header class="bnb-header">
-  			<h3>StarBnB</h3>
+  			<h3 class="js-home fake-link logo">
+        <!-- <%= link_to 'StarBnB', bnb_index_path, :class => "js-home"%> -->
+          StarBnb
+        </h3>
   			<ul class="tabs">
   			<!-- 	<li>Become a Host</li>
   				<li>Help</li> -->
   				<% if user_signed_in? %>
-  				<li><%= link_to 'Log Out', destroy_user_session_path, method: "DELETE" %></li>
+  				<li class="fake-link" id="js-logout">
+          <!-- <%= link_to 'Log Out', destroy_user_session_path, method: "DELETE" %> -->
+             Log Out
+          </li>
   				<% else %>
-  				<li id="js-signup">Sign Up</li>
-  				<li id="js-login"><%= link_to 'Log In', new_user_session_path %></li>
+  				<li id="js-signup" class="fake-link">Sign Up</li>
+  				<li id="js-login" class="fake-link">
+          <!-- <%= link_to 'Log In', new_user_session_path %> -->
+            Log In
+          </li>
   				<% end %>
   			</ul>
   		</header>

@@ -1,93 +1,152 @@
-
-
 <%= render partial: "shared/header" %>
 
 <div class="slider">
      <header id="bnb-Carousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+      
 
         <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="js-promotions">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('/assets/galaxy.jpeg');"></div>
                 <div class="carousel-caption">
                     <h2>700,000 bookings every second around the galaxy!</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="fill" style="background-image:url('/assets/coresant');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2>Exotic City Excursions</h2>
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="fill" style="background-image:url('/assets/bespin');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                    <h2>Cloud Cities Special</h2>
                 </div>
             </div>
         </div>
 
         <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="icon-prev"></span>
         </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
-        </a>
+        </a> -->
 
 </header>
 	
 </div>
 
-<div class="content">
+<div class="content-box">
+<!-- test note -->
 	<h4>Bookings</h4>
 
 	<div class="listings">
 	   <div class="table">
 
-        <div class="listing">
-        	<div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
+    
 
-        <div class="listing">
-            <div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
+            <div class="listing">
+            	<img src="/assets/tat_hut"/>
+                <h3>Quaint Desert Hut</h3>
+            </div>
+   
 
-        <div class="listing">
-            <div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
+            <div class="listing">
+                <img style="width: 300px; height: 168px;" src="/assets/dagobah"/>
+                <h3>Bayou Yoga</h3>
+            </div>
 
+            <div class="listing">
+                <img src="/assets/deathstar.jpeg"/>
+                <h3>Refurbished Starry Night</h3>
+            </div>
 
-        <div class="listing">
-            <div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
+            <div class="listing">
+                  <img style="width: 300px; height: 168px;" src="/assets/wreck.jpeg"/>
+                <h3>Vintage Exhaust Chamber</h3>
+            </div>
 
-        <div class="listing">
-            <div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
-
-
-        <div class="listing">
-            <div class="img"></div>
-            <h3>Project Title</h3>
-        </div>
-
-        
    		 </div>
 		
 	</div>
 </div>
+
+<% content_for :walkthrough do %>
+
+    <div class='item active'>
+    <div class='heading'>
+        <h3>Dynamically Generated HTML</h3>
+        <h4>Executed server side before being sent to browser</h4>
+    </div>
+                    <div class='carousel-content'>
+<!-- //////////////////////// CODE ////////////////////// -->
+                        <pre data-keep-tags="js-header, js-listing, js-promotions">
+                            <code class='html' >
+<js-header>&lt;%= render partial: "shared/header" %&gt;</js-header>
+
+&lt;div class="slider">
+     &lt;header id="bnb-Carousel" class="carousel slide">
+        &lt;!-- Indicators -->
+        &lt;ol class="carousel-indicators">
+            &lt;li data-target="#myCarousel" data-slide-to="0" class="active">&lt;/li>
+            &lt;li data-target="#myCarousel" data-slide-to="1">&lt;/li>
+            &lt;li data-target="#myCarousel" data-slide-to="2">&lt;/li>
+        &lt;/ol>
+
+        &lt;!-- Wrapper for Slides -->
+        &lt;div class="carousel-inner">
+           <js-promotions>
+            &lt;% @topPromotions.each do |promotion| %>
+
+                    &lt;% if promotion == @topPromotions[1] %>
+                    &lt;div class="item active">
+                    &lt;% else %>
+                    &lt;div class="item ">
+                    &lt;% end %>
+                &lt;div class="fill" style="background-image:&lt;%= promotion.imageUrl;">&lt;/div>
+                &lt;div class="carousel-caption">
+                    &lt;h2>&lt;%= promotion.title %>&lt;/h2>
+                &lt;/div>
+            &lt;/div>
+
+            &lt;% end %>
+            </js-promotions>
+        &lt;/div>
+
+
+&lt;/header>
+    
+&lt;/div>
+
+&lt;div class="content">
+    &lt;h4>Bookings&lt;/h4>
+
+    &lt;div class="listings">
+       &lt;div class="table">
+<js-listing>
+       &lt;% @listing_sample.each do |listing| %>
+            &lt;div class="listing">
+                &lt;div class="img">&lt;/div>
+                &lt;h3>&lt;%= listing.name %>&lt;/h3>
+            &lt;/div>
+        &lt;% end %>
+</js-listing>
+         &lt;/div>
+        
+    &lt;/div>
+&lt;/div>
+ </code>
+                        </pre>
+                    </div>
+               </div>
+
+<% end %>
+
+
+
+

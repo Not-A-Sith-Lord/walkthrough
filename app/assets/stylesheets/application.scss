@@ -14,23 +14,100 @@
  *= require_tree ./css
  *= require_self
  */
+/* important walkthrough styling */
 
+.yellow {
+	color: yellow;
+}
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.green {
+	color: green;
+}
+
+.hi {
+	color: white;
+	font-size: 18px;
+}
+
+.highlight {
+	border: 5px solid #ff0000;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+ctrl {
+	border: 3px solid yellow;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+act {
+	border: 3px solid red;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+render {
+	border: 3px solid green;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
+
+db {
+	border: 3px solid orange;
+	background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    z-index: 2;
+}
 
  /* Meta App Styling */
 
-header {
-	height: 5%;
+
+.fake-link {
+	cursor: pointer;
+}
+	.intro {
+		margin-top: 20rem;
+		padding: .2rem;
+		width: 300px;
+		border-radius: 5%;
+		background-color: #ff5a5f;
+		h2 {
+		color: white;
+		font-weight: 700;
+	}
+}
+.meta-header {
+	height: 6%;
 	margin: 0;
 	padding: 0;
+	border-bottom: 1px solid #cccccc;
 }
 div {
 	margin: 0;
 	padding: 0;
 }
 
-header h2 {
+#title-header {
+	padding-top: .8rem;
 	text-align: center;
 	margin: 0;
+	a {	font-weight: 700;
+		color:#f92672;
+		text-decoration: none;
+	}
 }
 
 body {
@@ -38,6 +115,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', georgia;
 }
 
 .walkthrough, .bnb {
@@ -46,19 +124,32 @@ body {
 	display: inline-block;
 	background-color: green;
 	padding: .5rem; /* Controls Screen borders */
-	border: 1px solid black;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.walkthrough {
+	padding: 0;
 }
 
 
 /* StarBnB styling */
 
+.notice {
+	text-align: center;
+	color: #ff5a5f;
+}
+.logo {
+	color: #ff5a5f;
+}
 .bnb {
 	background-color: white;
 	padding: 0;
 	overflow-y: scroll;
 }
 .bnb-header {
-	background-color: grey;
+	background-color: white;
 	padding: .5rem;
 }
 
@@ -75,6 +166,68 @@ body {
 .tabs li {
 	display: inline-block;
 	padding: .3rem 0 0 3rem;
+}
+
+.listing {
+	width: 300px;
+	background-color: white;
+	img {
+		width: 100%;
+	}
+	h3{
+		margin-top: 1rem;
+	}
+}
+
+/* slide wizardy */
+
+
+#walkthrough-carousel {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+
+
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+    width: 100%;
+
+}
+
+.carousel .row {
+	height: 100%;
+}
+
+#right-control, #launch-code {
+position: fixed;
+top: 85%; /* pushes the icon in the middle of the height */
+z-index: 5;
+display: inline-block;
+
+}
+
+#left-control{
+position: fixed;
+top: 85%;
+left: 50%;
+z-index: 5;
+display: inline-block;
+}
+
+#left-control, #right-control {
+	background: none;
+	background-image: none;
+}
+#left-control img, #right-control img {
+	width: 75px;
+}
+.carousel,.item,.active{
+   height:100%;
+ }
+.carousel-inner{
+    height:100%;
 }
 
 

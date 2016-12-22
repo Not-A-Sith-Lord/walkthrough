@@ -1,6 +1,46 @@
 
 $(document).on('turbolinks:load', function(){
 
+$("js-header").hover(function(){
+	console.log("hovering");
+	$("js-header").toggleClass("highlight");
+	$(".bnb-header").toggleClass("highlight");
+
+});
+
+$("js-listing").hover(function(){
+	console.log("hovering");
+	$("js-listing").toggleClass("highlight");
+	$(".listing").toggleClass("highlight");
+});
+
+$("js-promotions").hover(function(){
+	console.log("hovering");
+	$("js-promotions").toggleClass("highlight");
+	$("#js-promotions").toggleClass("highlight");
+});
+
+$("emailz").hover(function(){
+	console.log("hovering");
+	$("emailz").toggleClass("highlight");
+	$("#emailz").toggleClass("highlight");
+});
+
+$("pwdz").hover(function(){
+	console.log("hovering");
+	$("pwdz").toggleClass("highlight");
+	$("#pwdz").toggleClass("highlight");
+});
+
+$("send").hover(function(){
+	console.log("hovering");
+	$("send").toggleClass("highlight");
+	$("#js-login-submit").toggleClass("highlight");
+});
+
+
+
+
 $('#bnb-Carousel').carousel({
     interval: 5000,
     wrap: true
@@ -37,7 +77,7 @@ $("#js-signup-submit").on("click", function(e){
 
 	});
 
-$("#j").on("click", function(){
+$("#js-login").on("click", function(){
 		hideButton();
 		$.ajax({
 			type: "GET",
@@ -48,11 +88,50 @@ $("#j").on("click", function(){
 
 	});
 
+$("#js-login-submit").on("click", function(e){
+	console.log("Logging the js sign up submit");
+		e.preventDefault();
+		hideButton();
+		$.ajax({
+			type: "GET",
+			url: "/api/paths/3",
+			success: function (results) {
+				niceFetch(results);
+				$("#launch-code").on("click", function(e){
+					e.preventDefault();
+					$("form").submit();
+				});
+			},
+			error: badFetch
+		})
 
 
+	});
 
 
+$("#js-logout").on("click", function(){
+		hideButton();
+		$.ajax({
+			type: "GET",
+			url: "/api/paths/6",
+			success: function (results) {
+				niceFetch(results);
+				$('#launch-code').attr('data-method', 'delete');
+			},
+			error: badFetch
+		})
 
-
-
+	});
+		
 });
+
+
+
+
+
+
+
+
+
+
+

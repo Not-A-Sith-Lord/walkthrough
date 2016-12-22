@@ -4,10 +4,8 @@
 $(document).ready(function(){
 
 
-	$(".launch-btn").on("click", function(){
-		event.preventDefault();
-		$(".controls").removeClass("hidden");
-		
+	$(".js-home").on("click", function(){
+		hideButton();
 		$.ajax({
 			type: "GET",
 			url: "/api/paths/1",
@@ -53,10 +51,5 @@ function badFetch(error){
 function hideButton(){
 	$(".launch-btn").hide();
 	$(".js-attach").append("<div class='launch-btn'>Loading Page...</div>");
-
-
-}
-
-
 
 });

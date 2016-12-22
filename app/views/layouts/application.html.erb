@@ -3,60 +3,35 @@
   <head>
     <title>Rails on Rails</title>
     <%= csrf_meta_tags %>
-
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="/assets/application/modernizr-custom.js"></script>
   </head>
 
   <body>
-  	<header>
-  		<h2>Rails on Rails</h2>
+  	<header class="meta-header">
+  		<h2 id="title-header"> <%= link_to 'Rails on Rails', root_path %></h2>
   	</header>
 
   	 <div class="bnb col-md-6"> 
+        
      <% if user_signed_in? %> 
       <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
      <% end %> 
     	<%= yield %>
      </div> 
 
     <div class= "walkthrough col-md-6">
       
-
+    
 <div id="walkthrough-carousel" class="carousel slide" data-ride="carousel">
 
     <div class="row">
         <div class="height-window col-xs-12">
             <div class="carousel-inner" id="carousel-content">
 
-              <div class='item active'>
-                <div class='heading'>
-                  <h3>Rails Routes</h3>
-                  <h4>AKA the internal directory</h4>
-                </div>
-
-                <div class='carousel-content'>
-                  <pre>
-                    <code class='language-ruby'>
-                    Rails.application.routes.draw do
-
-                      root 'main#show'
-
-                          resources :bnb
-
-                          scope '/api' do
-                            resources :paths
-                          end
-
-                        end
-                    </code>
-                  </pre>
-                </div>
-              </div>
-
-
+              <%= yield :walkthrough %>
         </div>
     </div>
     <!-- controls -->

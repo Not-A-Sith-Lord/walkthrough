@@ -1,11 +1,39 @@
 
 <div class="intro">
 
-
-<h2 class="launch-btn">Launch StarBnB!
+<h2 class="js-home fake-link">Launch StarBnB!
 </h2>
 
 </div>
+
+<% content_for :walkthrough do %>
+
+    <div class='item active'>
+    <div class='heading'>
+        <h3>Rails Routes</h3>
+        <h4>This acts as the App's internal directory, which recieves HTTP requests</h4>
+    </div>
+                    <div class='carousel-content'>
+                        <pre>
+                            <code class='ruby' >
+Rails.application.routes.draw do
+
+	   root 'main#show'
+
+	   resources :bnb
+
+	   scope '/api' do
+		  resources :paths
+	   end
+
+end
+ </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+<% end %>
  
 
 

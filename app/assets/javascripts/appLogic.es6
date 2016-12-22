@@ -1,6 +1,17 @@
+$(document).ready(function () {
+	prePrism();
+});
+
 
 $(document).on('turbolinks:load', function(){
-Prism.highlightAll();
+
+	$('.ruby').addClass("language-ruby");
+	$('.html').addClass("language-markup");
+	console.log("I am launching prism");
+	Prism.highlightAll();
+
+
+
 $('#walkthrough-carousel').carousel({
     interval: false,
     wrap: false
@@ -12,11 +23,10 @@ $('#walkthrough-carousel').carousel({
 	    var index = $(e.target).find(".active").index();
 	    	console.log("The number of current index is: " + index);
 	    if(index === (count - 1)){
-	    	console.log()
 	    	$("#launch-code").show();
 	    	$('#right-control').hide();
 	    } else if ( index === 0){
-	    	$(this).children('#left-control').hide();
+	    	$('#left-control').hide();
 	    } else {
 	    	$("#launch-code").hide();
 	    	$('#right-control, #left-control').show();
@@ -33,6 +43,7 @@ function niceFetch(results){
 	console.log("this should only appear once");
 	console.log(results);
 
+	$("#carousel-content").empty();
 	var stuff = [];
 	var i = 0;
 
@@ -40,17 +51,19 @@ function niceFetch(results){
 		var content = object.content;
 		
 		$("#carousel-content").append(content);
-		// stuff.push(styledContent);
+		
+		
 		
 	});
-	
 
-	
 	$("#right-control, #left-control").removeClass("hidden");
 	$('#left-control').hide();
 
-	var executeButton = ` <a id="launch-code" class="right carousel-control" href="${results.destination}">Execute Code</a>`
+	var executeButton = ` <a id="launch-code" class="right carousel-control" href="${results.destination}">Render Page</a>`
 	$('#left-control').after(executeButton);
+
+	$('.ruby').addClass("language-ruby");
+	$('.html').addClass("language-markup");
 	Prism.highlightAll();
 	
 }
